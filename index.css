@@ -6,3 +6,11 @@
     text-align: center;
     padding: 10px;
 }
+
+.annotation-input-headings-row {
+    margin: 5px;
+}
+
+.annotation-input-fields-row { 
+    margin: 5px;
+}
