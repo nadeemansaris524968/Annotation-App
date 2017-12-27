@@ -26,5 +26,11 @@ var UIController = (function () {
 
 // GLOBAL APP CONTROLLER
 var controller = (function (){
-    // Some code
+
+    // var ctrlAddAnnotation = function () {
+    //     console.log('It works');
+    // }
+
+    // document.querySelector('#btn-save').addEventListener('click', ctrlAddAnnotation());
+
 })(annotationController, UIController);

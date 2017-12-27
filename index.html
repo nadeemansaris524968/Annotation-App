@@ -42,7 +42,7 @@
                 </tr>
             </tbody>
         </table>
-        <div class="row annotation-input-headings-row">
+        <div class="row annotation annotation-input-headings-row">
             <div class="col-lg-1">Major Anatomic Region</div>
             <div class="col-lg-2">Subanatomy</div>
             <div class="col-lg-1">Laterality Modifier</div>
@@ -52,32 +52,39 @@
             <div class="col-lg-2">No. of anamolies</div>
             <div class="col-lg-1">Size Modifiers</div>
         </div>
-        <div class="row annotation-input-fields-row">
-            <div class="col-lg-1">
-                <input type="text" id="major-anatomic-region" class="form-control" placeholder="Eg:">
+        <form>
+            <div class="row annotation annotation-input-fields-row">
+                <div class="col-lg-1">
+                    <input type="text" id="major-anatomic-region" class="form-control" placeholder="Eg:">
+                </div>
+                <div class="col-lg-2">
+                    <input type="text" id="subanatomy" class="form-control" placeholder="Eg:">
+                </div>
+                <div class="col-lg-1">
+                    <input type="text" id="laterality-modifier" class="form-control" placeholder="Eg:">
+                </div>
+                <div class="col-lg-2">
+                    <input type="text" id="laterality-modifier" class="form-control" placeholder="Eg:">
+                </div>
+                <div class="col-lg-2">
+                    <input type="text" id="findings" class="form-control" placeholder="Eg:">
+                </div>
+                <div class="col-lg-1">
+                    <input type="text" id="character" class="form-control" placeholder="Eg:">
+                </div>
+                <div class="col-lg-2">
+                    <input type="text" id="no-anammolies" class="form-control" placeholder="Eg:">
+                </div>
+                <div class="col-lg-1">
+                    <input type="text" id="size-modifier" class="form-control" placeholder="Eg:">
+                </div>
             </div>
-            <div class="col-lg-2">
-                <input type="text" id="subanatomy" class="form-control" placeholder="Eg:">
+            <div class="row annotation annotation-form-submit-button">
+                <div style="text-align: center">
+                    <button class="btn btn-default" id="btn-save">Save</button>
+                </div>
             </div>
-            <div class="col-lg-1">
-                <input type="text" id="laterality-modifier" class="form-control" placeholder="Eg:">
-            </div>
-            <div class="col-lg-2">
-                <input type="text" id="laterality-modifier" class="form-control" placeholder="Eg:">
-            </div>
-            <div class="col-lg-2">
-                <input type="text" id="findings" class="form-control" placeholder="Eg:">
-            </div>
-            <div class="col-lg-1">
-                <input type="text" id="character" class="form-control" placeholder="Eg:">
-            </div>
-            <div class="col-lg-2">
-                <input type="text" id="no-anammolies" class="form-control" placeholder="Eg:">
-            </div>
-            <div class="col-lg-1">
-                <input type="text" id="size-modifier" class="form-control" placeholder="Eg:">
-            </div>
-        </div>
+        </form>
     </div>
 </body>
 <script src="index.js"></script>
