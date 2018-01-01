@@ -70,6 +70,7 @@ var UICtrl = (function () {
         body: 'body',
         table: 'table',
         thead: 'thead',
+        tbody: 'tbody',
         th: 'th',
         tr: 'tr',
         td: 'td'
@@ -80,14 +81,14 @@ var UICtrl = (function () {
         table = document.createElement(DOMstrings.table);
         thead = document.createElement(DOMstrings.thead);
         tr = document.createElement(DOMstrings.tr);
-    
+
         for (var i = 0; i < colNames.length; i++) {
             var th = document.createElement(DOMstrings.th);
             var cellText = document.createTextNode(colNames[i]);
             th.appendChild(cellText);
             tr.appendChild(th);
         }
-    
+
         thead.appendChild(tr);
         table.appendChild(thead);
         table.classList.add('table');
@@ -95,10 +96,30 @@ var UICtrl = (function () {
         body.appendChild(table);
     };
 
+    var createTblBody = function (annotationRows) {
+        var rowData;
+        tbody = document.createElement(DOMstrings.tbody);
+        for (var i = 0; i < annotationRows.length; i++) {
+            rowData = annotationRows[i].row;
+            tr = document.createElement(DOMstrings.tr);
+            for (var j = 0; j < rowData.length; j++) {
+                td = document.createElement(DOMstrings.td);
+                var cellText = document.createTextNode(rowData[j]['value']);
+                
+                td.appendChild(cellText);
+                tr.appendChild(td);
+            }
+
+            tbody.appendChild(tr);
+        }
+        table.appendChild(tbody);
+        console.log(table);
+    };
+
     return {
-        displayTbl: function (colNames, rows) {
+        displayTbl: function (colNames, annotationRows) {
             createTblHeading(colNames);
-            
+            createTblBody(annotationRows);
         },
     };
 })();
