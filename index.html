@@ -5,6 +5,8 @@
     <title>Annotation App</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.16/datatables.min.css" />
+    <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.16/datatables.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link type="text/css" rel="stylesheet" href="index.css">
 </head>
@@ -16,41 +18,36 @@
                 Sample Annotation Rows
             </h3>
         </div>
-        <table class="table table-bordered">
-            <thead>
-                <tr>
-                    <th>Major Anatoamic Region</th>
-                    <th>Subanatomy</th>
-                    <th>Laterality Modifier</th>
-                    <th>Location Modifier</th>
-                    <th>Findings</th>
-                    <th>Character Modifiers</th>
-                    <th>No. of anamolies</th>
-                    <th>Size Modifiers</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Lungs</td>
-                    <td>Upper lung zone</td>
-                    <td>Bilateral</td>
-                    <td>Peripheral</td>
-                    <td>Alveolar opacity</td>
-                    <td>No, faint, moderately dense,  very dense</td>
-                    <td>N/A</td>
-                    <td>Small, Moderate, Large, Measures:</td>
-                </tr>
-            </tbody>
-        </table>
+        
+        <div class="annotation-table">
+            
+        </div>
+
         <div class="row annotation annotation-input-headings-row">
-            <div class="col-lg-1">Major Anatomic Region</div>
-            <div class="col-lg-2">Subanatomy</div>
-            <div class="col-lg-1">Laterality Modifier</div>
-            <div class="col-lg-2">Location Modifier</div>
-            <div class="col-lg-2">Findings</div>
-            <div class="col-lg-1">Character Modifiers</div>
-            <div class="col-lg-2">No. of anamolies</div>
-            <div class="col-lg-1">Size Modifiers</div>
+            <div class="col-lg-1">
+                <label for="major-anatomic-region">Major Anatomic Region</label>
+            </div>
+            <div class="col-lg-2">
+                <label for="subanatomy">Subanatomy</label>
+            </div>
+            <div class="col-lg-1">
+                <label for="laterality-modifier">Laterality Modifier</label>
+            </div>
+            <div class="col-lg-2">
+                <label for="location-modifier">Location Modifier</label>
+            </div>
+            <div class="col-lg-2">
+                <label for="findings">Findings</label>
+            </div>
+            <div class="col-lg-1">
+                <label for="character">Character Modifiers</label>
+            </div>
+            <div class="col-lg-2">
+                <label for="no-anammolies">No. of anamolies</label>
+            </div>
+            <div class="col-lg-1">
+                <label for="size-modifiers">Size Modifiers</label>
+            </div>
         </div>
         <form>
             <div class="row annotation annotation-input-fields-row">
@@ -64,7 +61,7 @@
                     <input type="text" id="laterality-modifier" class="form-control" placeholder="Eg:">
                 </div>
                 <div class="col-lg-2">
-                    <input type="text" id="laterality-modifier" class="form-control" placeholder="Eg:">
+                    <input type="text" id="location-modifier" class="form-control" placeholder="Eg:">
                 </div>
                 <div class="col-lg-2">
                     <input type="text" id="findings" class="form-control" placeholder="Eg:">
@@ -79,7 +76,7 @@
                     <input type="text" id="size-modifier" class="form-control" placeholder="Eg:">
                 </div>
             </div>
-            <div class="row annotation annotation-form-submit-button">
+            <div class="row annotation annotation-form-submit-button" style="padding: 10px">
                 <div style="text-align: center">
                     <button class="btn btn-default" id="btn-save">Save</button>
                 </div>
