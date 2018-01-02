@@ -52,7 +52,7 @@ var AnnotationCtrl = (function () {
     };
 
     return {
-        getColumnNames: function () {
+        getColumns: function () {
             return cxr_template.col;
         },
         getRows: function () {
@@ -73,7 +73,8 @@ var UICtrl = (function () {
         tbody: 'tbody',
         th: 'th',
         tr: 'tr',
-        td: 'td'
+        td: 'td',
+        tableDiv: '.annotation-table'
     };
 
     var createTblHeading = function (colNames) {
@@ -93,19 +94,20 @@ var UICtrl = (function () {
         table.appendChild(thead);
         table.classList.add('table');
         table.classList.add('table-bordered');
-        body.appendChild(table);
     };
 
     var createTblBody = function (annotationRows) {
         var rowData;
         tbody = document.createElement(DOMstrings.tbody);
+
         for (var i = 0; i < annotationRows.length; i++) {
             rowData = annotationRows[i].row;
             tr = document.createElement(DOMstrings.tr);
+
             for (var j = 0; j < rowData.length; j++) {
                 td = document.createElement(DOMstrings.td);
                 var cellText = document.createTextNode(rowData[j]['value']);
-                
+
                 td.appendChild(cellText);
                 tr.appendChild(td);
             }
@@ -113,14 +115,40 @@ var UICtrl = (function () {
             tbody.appendChild(tr);
         }
         table.appendChild(tbody);
-        console.log(table);
+        body.appendChild(table);
+    };
+
+    var rowSelectionDT = function () {
+        $('.table tbody').on('click', 'tr', function () {
+            $(this).toggleClass('selected');
+        });
+    };
+
+    var createDT = function () {
+        var dataTable = $(DOMstrings.table).DataTable();
+
+        // Setup row selection click event on DT
+        rowSelectionDT();
+
+        // Remove later
+        $('.btn').click(function() {
+            alert(dataTable.rows('.selected').data().length + 'rows selected');
+        });
+
+        // Inserting data table element inside annotation-table div
+        dataTable = document.querySelector('.dataTables_wrapper');
+        document.querySelector('.annotation-table').insertAdjacentElement('afterbegin', dataTable);
     };
 
     return {
         displayTbl: function (colNames, annotationRows) {
             createTblHeading(colNames);
             createTblBody(annotationRows);
+            console.log(table);
         },
+        createDataTable: function() {
+            createDT();
+        }
     };
 })();
 
@@ -130,8 +158,8 @@ var controller = (function () {
     return {
         init: function () {
             console.log('Application started');
-            UICtrl.displayTbl(AnnotationCtrl.getColumnNames(), AnnotationCtrl.getRows());
-            $('.table').DataTable();
+            UICtrl.displayTbl(AnnotationCtrl.getColumns(), AnnotationCtrl.getRows());
+            UICtrl.createDataTable();
         }
     }
 
