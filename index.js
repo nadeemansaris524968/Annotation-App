@@ -118,36 +118,32 @@ var UICtrl = (function () {
         body.appendChild(table);
     };
 
-    var rowSelectionDT = function () {
+    var createDT = function () {
+        var table = $(DOMstrings.table).DataTable();
+
+        // Setup click event on rows for row selection
         $('.table tbody').on('click', 'tr', function () {
             $(this).toggleClass('selected');
         });
-    };
 
-    var createDT = function () {
-        var dataTable = $(DOMstrings.table).DataTable();
-
-        // Setup row selection click event on DT
-        rowSelectionDT();
-
-        // Remove later
-        $('.btn').click(function() {
-            alert(dataTable.rows('.selected').data().length + 'rows selected');
+        $('.btn').click(function () {
+            alert(table.rows('.selected').data().length + 'rows selected');
         });
-
-        // Inserting data table element inside annotation-table div
-        dataTable = document.querySelector('.dataTables_wrapper');
-        document.querySelector('.annotation-table').insertAdjacentElement('afterbegin', dataTable);
     };
 
     return {
-        displayTbl: function (colNames, annotationRows) {
+        createTbl: function (colNames, annotationRows) {
             createTblHeading(colNames);
             createTblBody(annotationRows);
             console.log(table);
         },
-        createDataTable: function() {
+        createDataTable: function () {
             createDT();
+        },
+        placeDT: function () {
+            // Inserting data table element inside annotation-table div
+            var dataTable = document.querySelector('.dataTables_wrapper');
+            document.querySelector('.annotation-table').insertAdjacentElement('afterbegin', dataTable);
         }
     };
 })();
@@ -158,8 +154,9 @@ var controller = (function () {
     return {
         init: function () {
             console.log('Application started');
-            UICtrl.displayTbl(AnnotationCtrl.getColumns(), AnnotationCtrl.getRows());
+            UICtrl.createTbl(AnnotationCtrl.getColumns(), AnnotationCtrl.getRows());
             UICtrl.createDataTable();
+            UICtrl.placeDT();
         }
     }
 
