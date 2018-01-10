@@ -328,12 +328,15 @@ var UICtrl = (function () {
     };
 
     var createDT = function () {
-        var table = $(DOMstrings.table).DataTable({
-            select : {
-                style : 'multi'
-            }
+        var table = $(DOMstrings.table).DataTable();
+
+        $('#annotation-table tbody').on('click', 'tr', function () {
+            $(this).toggleClass('selected');
         });
-        
+
+        $('#showRowsBtn').on('click', function () {
+            table.rows('.selected').remove().draw(false);
+        });
     };
 
     return {
@@ -348,7 +351,7 @@ var UICtrl = (function () {
         placeDT: function () {
             // Inserting data table element inside annotation-table div
             var dataTable = document.querySelector('.dataTables_wrapper');
-            document.querySelector('.annotation-table-div').insertAdjacentElement('afterbegin', dataTable);
+            document.querySelector('.annotation-table-div').insertAdjacentElement('beforeend', dataTable);
         }
     };
 })();
