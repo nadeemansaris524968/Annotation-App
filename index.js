@@ -328,16 +328,20 @@ var UICtrl = (function () {
     };
 
     var createDT = function () {
-        var table = $(DOMstrings.table).DataTable();
+        var table = $(DOMstrings.table).DataTable({
+            select : {
+                style : 'multi'
+            }
+        });
 
         // Setup click event on rows for row selection
-        $('.table tbody').on('click', 'tr', function () {
-            $(this).toggleClass('selected');
-        });
+        // table.on('click', 'tr', function () {
+        //     $(this).toggleClass('selected');
+        // });
 
-        $('.btn').click(function () {
-            alert(table.rows('.selected').data().length + 'rows selected');
-        });
+        // $('.btn').click(function () {
+        //     alert(table.rows('.selected').data().length + 'rows selected');
+        // });
     };
 
     return {
@@ -354,52 +358,27 @@ var UICtrl = (function () {
             var dataTable = document.querySelector('.dataTables_wrapper');
             document.querySelector('.annotation-table-div').insertAdjacentElement('afterbegin', dataTable);
         },
-        jQueryTranspose: function () {
-            $("table").each(function () {
-                var $this = $(this);
-                var newrows = [];
-                $this.find("tr").each(function () {
-                    var i = 0;
-                    $(this).find("td, th").each(function () {
-                        i++;
-                        if (newrows[i] === undefined) { newrows[i] = $("<tr></tr>"); }
-                        if (i == 1)
-                            newrows[i].append("<th>" + this.innerHTML + "</th>");
-                        else
-                            newrows[i].append("<td>" + this.innerHTML + "</td>");
-                    });
-                });
-                $this.find("tr").remove();
-                $.each(newrows, function () {
-                    $this.append(this);
-                });
-            });
-        },
-        setupTblSearch: function () {
-            $('#myInput').keyup(function () {
-                var input, filter, table, tr, td, i;
-                input = document.getElementById("myInput");
-                filter = input.value.toUpperCase();
-                table = document.getElementById("myTable");
-                tr = table.querySelectorAll("tr");
-                for (i = 0; i < tr.length; i++) {
-                    td = tr[i].getElementsByTagName("td")[0];
-                    if (td) {
-                        if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
-                            tr[i].style.display = "";
-                        } else {
-                            tr[i].style.display = "none";
-                        }
-                    }
-                }
-            });
-            // $('#myInput').on("keyup", function () {
-            //     var value = $(this).val().toLowerCase();
-            //     $('#myTable td').filter(function () {
-            //         $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
-            //     });
-            // });
-        }
+        // jQueryTranspose: function () {
+        //     $("table").each(function () {
+        //         var $this = $(this);
+        //         var newrows = [];
+        //         $this.find("tr").each(function () {
+        //             var i = 0;
+        //             $(this).find("td, th").each(function () {
+        //                 i++;
+        //                 if (newrows[i] === undefined) { newrows[i] = $("<tr></tr>"); }
+        //                 if (i == 1)
+        //                     newrows[i].append("<th>" + this.innerHTML + "</th>");
+        //                 else
+        //                     newrows[i].append("<td>" + this.innerHTML + "</td>");
+        //             });
+        //         });
+        //         $this.find("tr").remove();
+        //         $.each(newrows, function () {
+        //             $this.append(this);
+        //         });
+        //     });
+        // }
     };
 })();
 
@@ -412,7 +391,7 @@ var controller = (function () {
             UICtrl.createTbl(AnnotationCtrl.getColumns(), AnnotationCtrl.getRows());
             UICtrl.createDataTable();
             UICtrl.placeDT();
-
+            
             // Transposing simple table
             // UICtrl.setupTblSearch();
             // UICtrl.jQueryTranspose();
