@@ -333,15 +333,7 @@ var UICtrl = (function () {
                 style : 'multi'
             }
         });
-
-        // Setup click event on rows for row selection
-        // table.on('click', 'tr', function () {
-        //     $(this).toggleClass('selected');
-        // });
-
-        // $('.btn').click(function () {
-        //     alert(table.rows('.selected').data().length + 'rows selected');
-        // });
+        
     };
 
     return {
@@ -357,28 +349,7 @@ var UICtrl = (function () {
             // Inserting data table element inside annotation-table div
             var dataTable = document.querySelector('.dataTables_wrapper');
             document.querySelector('.annotation-table-div').insertAdjacentElement('afterbegin', dataTable);
-        },
-        // jQueryTranspose: function () {
-        //     $("table").each(function () {
-        //         var $this = $(this);
-        //         var newrows = [];
-        //         $this.find("tr").each(function () {
-        //             var i = 0;
-        //             $(this).find("td, th").each(function () {
-        //                 i++;
-        //                 if (newrows[i] === undefined) { newrows[i] = $("<tr></tr>"); }
-        //                 if (i == 1)
-        //                     newrows[i].append("<th>" + this.innerHTML + "</th>");
-        //                 else
-        //                     newrows[i].append("<td>" + this.innerHTML + "</td>");
-        //             });
-        //         });
-        //         $this.find("tr").remove();
-        //         $.each(newrows, function () {
-        //             $this.append(this);
-        //         });
-        //     });
-        // }
+        }
     };
 })();
 
@@ -391,10 +362,6 @@ var controller = (function () {
             UICtrl.createTbl(AnnotationCtrl.getColumns(), AnnotationCtrl.getRows());
             UICtrl.createDataTable();
             UICtrl.placeDT();
-            
-            // Transposing simple table
-            // UICtrl.setupTblSearch();
-            // UICtrl.jQueryTranspose();
         }
     }
 
