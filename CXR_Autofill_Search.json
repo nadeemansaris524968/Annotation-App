@@ -1,0 +1,427 @@
+{
+    "Major Anatomic Region": [
+        {
+            "Bones": [
+                {
+                    "Subanatomy": [
+                        "Ribs",
+                        "Cervical Spine",
+                        "Thoracic Spine",
+                        "Lumbar Spine",
+                        "Scapula",
+                        "Sternum",
+                        "Clavicle",
+                        "Humerus",
+                        "Acromioclavicular Joint",
+                        "Glenohumeral Joint"
+                    ],
+                    "Laterality Modifier": [
+                        "Left",
+                        "Right"
+                    ],
+                    "Location Modifier": [
+                        "T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12-Body, endplate, transverse process, pedicle",
+                        "1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12-Posterior, lateral, anterior",
+                        "Head, surgical neck, anatomic neck, diaphysis, greater tuberosity",
+                        "C4, C5, C6, C7-Body, endplate, transverse process, pedicle",
+                        "L1, L2, L3, L4-Body, endplate, transverse process, pedicle",
+                        "Spine, Body, Neck Glenoid, Acromion",
+                        "Spine, Body, Glenoid, Acromion",
+                        "Manubrium, Body, Xiphoid",
+                        "Medial, Mid, Distal"
+                    ],
+                    "Findings": [
+                        "Fracture",
+                        "Bone Lesion",
+                        "Metal bone implant or fixation hardware",
+                        "Scoliosis",
+                        "Spinal degenerative changes",
+                        "Arthropathy",
+                        "Disclocation"
+                    ],
+                    "Character Modifiers": [
+                        "Non-displaced, displaced, comminuted, segmental",
+                        "Non-displaced, moderately displaced, markedly displaced, mild compression, moderate compression, severe compression",
+                        "Non-displaced, displaced, comminuted",
+                        "Focal lytic, focal blastic, likely Pagets",
+                        "Fixation Wires",
+                        "Vertebroplasty, fixation plate and screws, disc replacement",
+                        "Vertebroplasty, fixation plate and screws, disc replacement, spinal rods",
+                        "Orthopedic hardware, fixation plate and screws",
+                        "Sternal Wires",
+                        "Fixation wires, fixation plates and screws",
+                        "Fixation wires, fixation plates and screws, arthroplasty, hemiarthroplasty, intramedullary rods",
+                        "Right convex, left convex, mild, moderate, severe",
+                        "Mild, moderate, severe",
+                        "Mild subluxation, moderate, severe"
+                    ],
+                    "# Modifiers": [
+                        "NA"
+                    ],
+                    "Size Modifiers": [
+                        "Small, Moderate, Large, Measures:",
+                        "Cobb angle measures:"
+                    ]
+                }
+            ]
+        },
+        {
+            "Lungs": [
+                {
+                    "Subanatomy": [
+                        "Upper Lung Zone",
+                        "Lower Lung Zone",
+                        "Mid Lung Zone",
+                        "All Lung Zones",
+                        "Hila",
+                        "NA"
+                    ],
+                    "Laterality Modifier": [
+                        "Bilateral",
+                        "Left",
+                        "Right"
+                    ],
+                    "Location Modifier": [
+                        "Peripheral",
+                        "Central",
+                        "Partial",
+                        "Complete"
+                    ],
+                    "Findings": [
+                        "Alveolar Opacity",
+                        "Atelectasis",
+                        "Mass/Nodule",
+                        "Scattered Bilateral Nodules/Miliary disease",
+                        "Increased reticular markings",
+                        "findings consistent with granulomatous disease",
+                        "findings consistent with granulomatous",
+                        "Hypoaeration",
+                        "Cyst/Bulla",
+                        "Bronchiectesis",
+                        "Peribronchial cuffing",
+                        "Enlarged hilum",
+                        "Calcified hilar nodes",
+                        "Pneumonectomy"
+                    ],
+                    "Character Modifiers": [
+                        "No, faint, moderately dense, very dense",
+                        "No, homogeneous, heterogeneous, calcified, rim calcifed, thin walled, thick walled",
+                        "No, Mild, Moderate, Severe",
+                        "No, cylindrical, saccular, varicoid",
+                        "NA"
+                    ],
+                    "# Modifiers": [
+                        "Solitary, multiple, numerous miliary",
+                        "Single, multiple",
+                        "Focal, multifocal",
+                        "NA"
+                    ],
+                    "Size Modifiers": [
+                        "Small, Moderate, Large, Measures:",
+                        "Measures:",
+                        "NA"
+                    ]
+                }
+            ]
+        },
+        {
+            "Major Airways" : [
+                {
+                    "Subanatomy" : [
+                        "Trachea",
+                        "Mainstem bronchus"
+                    ],
+                    "Laterality Modifier" : [
+                        "Right",
+                        "Left",
+                        "NA"
+                    ],
+                    "Location Modifier" : [
+                        "Lower",
+                        "Mid",
+                        "Upper",
+                        "NA"
+                    ],
+                    "Findings" : [
+                        "[Modifier] of the tracheal diameter",
+                        "[Modifier] tracheal displacement",
+                        "[Modifier] mainstem bronchus and branches"
+                    ],
+                    "Character Modifiers" : [
+                        "Mild narrowing, moderate narrowing, severe narrowing, normal diameter, mild dilatation, moderate dilatation, severely dilatation",
+                        "Mild leftward, moderate leftward, severe leftward, mild rightward, moderate rightward, severe rightward",
+                        "Narrowed, cut-off, upwardly displaced, downwardly displaced, dilated, endobronchial lesion"
+                    ],
+                    "# Modifiers" : [
+                        "NA"
+                    ],
+                    "Size Modifiers" : [
+                        "Measure:",
+                        "NA"
+                    ]
+                }
+            ]
+        },
+        {
+            "Mediastinum": [
+                {
+                    "Subanatomy": [
+                        "Paratracheal stripe",
+                        "Paratracheal region",
+                        "Azygous region",
+                        "Cardiac silhouette",
+                        "Cardiophrenic angle"
+                    ],
+                    "Laterality Modifier": [
+                        "Left",
+                        "Right",
+                        "NA"                     
+                    ],
+                    "Location Modifier": [
+                        "Superior",
+                        "Mitral valve annulus",
+                        "Mitral valve",
+                        "Aortic valve",
+                        "Pulmonic valve",
+                        "Tricuspid valve",
+                        "Atrium",
+                        "Ventricle"
+                    ],
+                    "Findings": [
+                        "Thickened paratracheal stripe",
+                        "Paratracheal mass",
+                        "Azygous region enlargement",
+                        "Mediastinal widening",
+                        "Mediastinal displacement",
+                        "Pneunomediastinum",
+                        "Enlarged cardiac silhouette",
+                        "Obscured left cardiac silhouette",
+                        "Obscured right cardiac silhouette",
+                        "Pneumopericardium",
+                        "Pneumocardium",
+                        "Abnormal shape suggesting congenital heart disease",
+                        "Mitral valve annulus calcification",
+                        "Mitral valve calcification",
+                        "Mitral valve prosthesis",
+                        "Aortic valve calcification",
+                        "Aortic valve prosthesis",
+                        "Pulmonic valve calcification",
+                        "Pulmonic valve prosthesis",
+                        "Tricuspid valve calcification",
+                        "Tricuspid valve prosthesis",
+                        "Enlarged left atrium",
+                        "Enlarged right atrium",
+                        "Enlarged left ventricle",
+                        "Left ventricular bulging with calcification",
+                        "Left ventricular bulging without calcification",
+                        "Pericardial calcification",
+                        "Cardiophrenic angle mass"
+                    ],
+                    "Character Modifiers" : [
+                        "No, Mild, Moderate, Severe",
+                        "Non-calcified, calcified",
+                        "NA"
+                    ],
+                    "# Modifiers" : [
+                        "NA"
+                    ],
+                    "Size Modifiers" : [
+                        "Measure:",
+                        "Cardiothoracic ration:  X%",
+                        "NA"
+                    ]
+                }
+            ]
+        },
+        {
+            "Pleura" : [
+                {
+                    "Subanatomy" : [
+                        "Costophrenic angle",
+                        "Hemidiaphragm",
+                        "NA"
+                    ],
+                    "Laterality Modifier" : [
+                        "Left",
+                        "Right",
+                        "Bilateral"
+                    ],
+                    "Location Modifier" : [
+                        "Apical",
+                        "Lateral",
+                        "Basilar/Diaphragmatic",
+                        "NA"
+                    ],
+                    "Findings" : [
+                        "Pleural calcification",
+                        "Pleural mass",
+                        "Pleural masses",
+                        "Pneumothorax",
+                        "Pneumothoraces",
+                        "Pleural thickening",
+                        "Pneumothorax",
+                        "Costophrenic angle blunting",
+                        "Flattening of the hemidiaphragmatic silhouette",
+                        "Obscuration of the diaphragmatic silhouette",
+                        "Pleural effusion",
+                        "Hydropneumothorax",
+                        "Hydropneumothoraces"
+                    ],
+                    "Character Modifiers" : [
+                        "NA"
+                    ],
+                    "# Modifiers" : [
+                        "NA"
+                    ],
+                    "Size Modifiers" : [
+                        "Small, Moderate, Large, Measures:"
+                    ]
+                }
+            ]
+        },
+        {
+            "Vaculature" : [
+                {
+                    "Subanatomy" : [
+                        "Pulmonary veins",
+                        "Pulmonary arteries",
+                        "Upper lung zone",
+                        "Mid lung zone",
+                        "Lower lung zone",
+                        "Aorta"
+                    ],
+                    "Laterality Modifier" : [
+                        "Left",
+                        "Right",
+                        "Bilateral",
+                        "NA"
+                    ],
+                    "Location Modifier" : [
+                        "Ascending",
+                        "Descending",
+                        "Arch",
+                        "NA"
+                    ],
+                    "Findings" : [
+                        "Vascular redistribution",
+                        "Pulmonary artery enlargement",
+                        "Pulmonary artery cut-off",
+                        "Anomalous pulmonary vessel",
+                        "Aortic atherosclerosis",
+                        "Dilatation of the ascending aorta",
+                        "Dilatation of the aortic arch",
+                        "Dilatation of the descending thoracic aorta",
+                        "Obscuration of the descending thoracic aorta",
+                        "Right-sided aortic arch",
+                        "Aorta/great vessel congenital anomaly"
+                    ],
+                    "Character Modifiers" : [
+                        "NA",
+                        "No, Mild, Moderate, Severe"
+                    ],
+                    "# Modifiers" : [
+                        "NA"
+                    ],
+                    "Size Modifiers" : [
+                        "Measure:",
+                        "NA"
+                    ]
+                }
+            ]
+        },
+        {
+            "Other" : [
+                {
+                    "Subanatomy" : [
+                        "Abdomen",
+                        "Breast",
+                        "Axilla",
+                        "Neck",
+                        "Chest wall"
+                    ],
+                    "Laterality Modifier" : [
+                        "Left",
+                        "Right",
+                        "Bilateral",
+                        "NA"
+                    ],
+                    "Location Modifier" : [
+                        "Hiatus",
+                        "Morgagni",
+                        "Bochdalek",
+                        "Diaphragmatic",
+                        "Carotid artery",
+                        "NA"
+                    ],
+                    "Findings" : [
+                        "Endotracheal tube position",
+                        "Tracheostomy tube position",
+                        "Single lumen central line position",
+                        "Multi-lumen central line position",
+                        "PICC position",
+                        "Swan-Ganz catheter position",
+                        "Nasogastric tube position",
+                        "Feeding tube position",
+                        "Gastrotomy tube position",
+                        "Chest tubes position",
+                        "Ventricular shunt catheter position",
+                        "Mediastinal drains position",
+                        "Cardiac pacemaker and lead position",
+                        "Automated implantable cardioverter-defibrillator and lead position",
+                        "Coronary stents",
+                        "Epicardial pacing wires",
+                        "Mediastinal clips",
+                        "Cholecystectomy clips",
+                        "Lung biopsy sutures",
+                        "Hernia",
+                        "Subdiaphragmatic free air",
+                        "Dilated stomach",
+                        "Abdominal organ position",
+                        "Abdominal organ enlargement",
+                        "Mastectomy",
+                        "Mastectomies",
+                        "Breast mplant",
+                        "Breast mplants",
+                        "Axillary surgical clips",
+                        "Neck subcutaneous emphysema",
+                        "Carotid artery calcification",
+                        "Chest wall subcutaneous emphysema",
+                        "Chest wall mass",
+                        "Chest wall masses",
+                        "Axillary mass",
+                        "Axillary masses"
+                    ],
+                    "Character Modifiers" : [
+                        "Too proximal, proper position, too distal, in right mainstem bronchus, in left mainstem bronchus",
+                        "Too proximal, proper position, too distal, kinked, positioned improperly in:",
+                        "Typical position, improper position, kinked",
+                        "Typical position, improper position, too proximal, kinked",
+                        "Typical position, improper lead position, wires looped around pacer",
+                        "Typical appearance, atypical appearance",
+                        "Location:",
+                        "Type:",
+                        "Concerning for pathology, likely related to recent abdominal surgery",
+                        "Situs inversus, situs indeterminus",
+                        "No, Mild, Moderate, Severe",
+                        "Present",
+                        "NA"
+                    ],
+                    "# Modifiers" : [
+                        "Number:",
+                        "NA"
+                    ],
+                    "Size Modifiers" : [
+                        "Position relative to the carina:",
+                        "Postion relative to left atrium:",
+                        "Postion relative to main pulmonary artery:",
+                        "Position relative to gastroesophageal junction:",
+                        "Postion relative to chest wall:",
+                        "Number:",
+                        "Small, Moderate, Large, Measures:",
+                        "Mild, moderate, severe:"
+                    ]
+                }
+            ]
+        }
+    ]
+}
