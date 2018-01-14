@@ -294,6 +294,11 @@ var UICtrl = (function () {
             tr.appendChild(th);
         }
 
+        // Delete Row Th housing delete button for each row
+        var deleteRowTh = document.createElement(DOMstrings.th);
+        deleteRowTh.appendChild(document.createTextNode('Delete'));
+        tr.appendChild(deleteRowTh);
+
         thead.appendChild(tr);
         // table.appendChild(tr);
         table.appendChild(thead);
@@ -319,6 +324,13 @@ var UICtrl = (function () {
                 td.appendChild(cellText);
                 tr.appendChild(td);
             }
+
+            var deleteBtnTd = document.createElement('td');
+            var rowDeleteBtn = document.createElement('button');
+            rowDeleteBtn.appendChild(document.createTextNode('Delete'));
+
+            deleteBtnTd.appendChild(rowDeleteBtn);
+            tr.appendChild(deleteBtnTd);
             // Adding row one by one to tbody
             tbody.appendChild(tr);
         }
@@ -330,12 +342,11 @@ var UICtrl = (function () {
     var createDT = function () {
         var table = $(DOMstrings.table).DataTable();
 
-        $('#annotation-table tbody').on('click', 'tr', function () {
-            $(this).toggleClass('selected');
-        });
-
-        $('#showRowsBtn').on('click', function () {
-            table.rows('.selected').remove().draw(false);
+        $('#annotation-table tbody').on('click', 'button', function () {
+            table
+            .row($(this).parents('tr'))
+            .remove()
+            .draw();
         });
     };
 
