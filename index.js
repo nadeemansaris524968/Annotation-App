@@ -340,13 +340,13 @@ var UICtrl = (function () {
     };
 
     var createDT = function () {
-        var table = $(DOMstrings.table).DataTable();
+        table = $(DOMstrings.table).DataTable();
 
         $('#annotation-table tbody').on('click', 'button', function () {
             table
-            .row($(this).parents('tr'))
-            .remove()
-            .draw();
+                .row($(this).parents('tr'))
+                .remove()
+                .draw();
         });
     };
 
@@ -361,8 +361,21 @@ var UICtrl = (function () {
         },
         placeDT: function () {
             // Inserting data table element inside annotation-table div
-            var dataTable = document.querySelector('.dataTables_wrapper');
-            document.querySelector('.annotation-table-div').insertAdjacentElement('beforeend', dataTable);
+            var dataTableDiv = document.querySelector('.dataTables_wrapper');
+            document.querySelector('.annotation-table-div').insertAdjacentElement('beforeend', dataTableDiv);
+        },
+        getRows: function () {
+            $("#getRows").on('click', function () {
+                table.rows().every( function ( rowIdx, tableLoop, rowLoop ) {
+                    var eachRow = this.data();
+                    
+                    eachRow.forEach(function(cellData){
+                        if (!cellData.includes("Delete")) {
+                            console.log(cellData);
+                        }
+                    });
+                } );
+            });
         }
     };
 })();
@@ -376,6 +389,7 @@ var controller = (function () {
             UICtrl.createTbl(AnnotationCtrl.getColumns(), AnnotationCtrl.getRows());
             UICtrl.createDataTable();
             UICtrl.placeDT();
+            UICtrl.getRows();
         }
     }
 
