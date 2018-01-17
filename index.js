@@ -305,6 +305,7 @@ var UICtrl = (function () {
         table.id = 'annotation-table';
         table.classList.add('table');
         table.classList.add('table-bordered');
+        table.classList.add('responsive');
     };
 
     var createTblBody = function (annotationRows) {
@@ -340,7 +341,14 @@ var UICtrl = (function () {
     };
 
     var createDT = function () {
-        table = $(DOMstrings.table).DataTable();
+        table = $(DOMstrings.table).DataTable({
+            "paging": false,
+            "scrollY": "400px"
+        });
+
+        // Fix for enabling vertical scroll
+        $('.dataTables_scrollHeadInner').css("width", "100%");
+        $('div.dataTables_scrollHeadInner > table').css("width", "100%");
 
         $('#annotation-table tbody').on('click', 'button', function () {
             table
@@ -366,15 +374,15 @@ var UICtrl = (function () {
         },
         getRows: function () {
             $("#getRows").on('click', function () {
-                table.rows().every( function ( rowIdx, tableLoop, rowLoop ) {
+                table.rows().every(function (rowIdx, tableLoop, rowLoop) {
                     var eachRow = this.data();
-                    
-                    eachRow.forEach(function(cellData){
+
+                    eachRow.forEach(function (cellData) {
                         if (!cellData.includes("Delete")) {
                             console.log(cellData);
                         }
                     });
-                } );
+                });
             });
         }
     };
